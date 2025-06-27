@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Inventory | Al-Malik Group</title>
+    <script src="https://kit.fontawesome.com/1e29736556.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+    <nav>
+        <div class="top-bar">
+            <div class="contact">
+                <a href="tel:+256701760786"><p><i class="fas fa-phone-alt"></i><strong>Call: </strong> +256 701 160786</p></a>
+                <a href="mailto:malikharis2089@gmail.com"><p><i class="fas fa-envelope"></i><strong>E-Mail: </strong> malikharis2089@gmail.com</p></a>
+                <a href="https://www.google.com/maps/place/Al+Malik+Group/@0.3256178,32.6060037,17z/data=!3m1!4b1!4m6!3m5!1s0x177dbb563f7a1ea9:0x3d9296aff92f93a4!8m2!3d0.3256124!4d32.6085786!16s%2Fg%2F11j5fytydb?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><p><i class="fas fa-map-marker-alt"></i><strong>Location: </strong> Al-Malik Group</p></a>
+            </div>
+            <div class="socials">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        
+        <div class="main-nav">
+            <div class="logo">
+                <img src="Website Pictures/Website/Logo.jpeg" alt="Al-Malik Group Logo">
+                <h1>Al-<span>Malik</span> Group</h1>
+            </div>
+            <div class="navitems">
+                <a href="index.html"><h3>Home</h3></a>
+                <a href="aboutUs.html"><h3>About Us</h3></a>
+                <a href="clearing.html"><h3>Clearing</h3></a>
+                <a href="contact.html"><h3>Contact Us</h3></a>
+                <a href="inventory.html"><button>
+                    <i class="fas fa-car"></i>
+                    <h3>View Cars</h3>
+                </button></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="inventory">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Vehicle Inventory</h2>
+                <p>Browse our carefully selected collection of high-quality vehicles from around the world</p>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-title"><i class="fas fa-filter"></i> Filter Vehicles</h3>
+                <div class="filter-grid">
+                    <!-- Make Filter -->
+                    <div class="filter-group">
+                        <label for="make">Make</label>
+                        <div class="custom-dropdown" id="make-dropdown">
+                            <div class="selected-option" id="make-selected">All Makes</div>
+                            <div class="dropdown-options" id="make-options">
+                                <div data-value="">All Makes</div>
+                                <div data-value="toyota">Toyota</div>
+                                <div data-value="subaru">Subaru</div>
+                                <div data-value="nissan">Nissan</div>
+                                <div data-value="bmw">BMW</div>
+                                <div data-value="mercedes">Mercedes</div>
+                            </div>
+                        </div>
+                        <select id="make" style="display: none;">
+                            <option value="">All Makes</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="subaru">Subaru</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Model Filter -->
+                    <div class="filter-group">
+                        <label for="model">Model</label>
+                        <div class="custom-dropdown" id="model-dropdown">
+                            <div class="selected-option" id="model-selected">All Models</div>
+                            <div class="dropdown-options" id="model-options">
+                                <div data-value="">All Models</div>
+                                <div data-value="prado">Land Cruiser Prado</div>
+                                <div data-value="rav4">RAV4</div>
+                                <div data-value="hiace">Hiace</div>
+                                <div data-value="harrier">Harrier</div>
+                                <div data-value="hilux">Hilux</div>
+                                <div data-value="fielder">Fielder</div>
+                                <div data-value="probox">Probox</div>
+                                <div data-value="sienta">Sienta</div>
+                            </div>
+                        </div>
+                        <select id="model" style="display: none;">
+                            <option value="">All Models</option>
+                            <option value="prado">Land Cruiser Prado</option>
+                            <option value="rav4">RAV4</option>
+                            <option value="hiace">Hiace</option>
+                            <option value="harrier">Harrier</option>
+                            <option value="hilux">Hilux</option>
+                            <option value="fielder">Fielder</option>
+                            <option value="probox">Probox</option>
+                            <option value="sienta">Sienta</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Year Filter -->
+                    <div class="filter-group">
+                        <label for="year">Year</label>
+                        <div class="custom-dropdown" id="year-dropdown">
+                            <div class="selected-option" id="year-selected">All Years</div>
+                            <div class="dropdown-options" id="year-options">
+                                <div data-value="">All Years</div>
+                                <div data-value="2024">2024</div>
+                                <div data-value="2023">2023</div>
+                                <div data-value="2022">2022</div>
+                                <div data-value="2021">2021</div>
+                                <div data-value="2020">2020</div>
+                                <div data-value="2019">2019</div>
+                                <div data-value="2018">2018</div>
+                                <div data-value="2017">2017</div>
+                                <div data-value="2016">2016</div>
+                                <div data-value="2015">2015</div>
+                                <div data-value="2014">2014</div>
+                                <div data-value="2013">2013</div>
+                                <div data-value="2012">2012</div>
+                            </div>
+                        </div>
+                        <select id="year" style="display: none;">
+                            <option value="">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-outline" id="reset-filters">Reset Filters</button>
+                    <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="inventory-grid">
+                
+            </div>
+
+            <!-- Pagination Container -->
+            <div class="pagination-container">
+                <div class="pagination-controls"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Al-Malik</h3>
+                <p>With over a decade of experience, Al-Malik Group has established itself as a leader in premium automotive solutions in East Africa.</p>
+                <div class="socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="aboutUs.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="clearing"><i class="fas fa-chevron-right"></i> Clearing</a></li>
+                    <li><a href="inventory.html"><i class="fas fa-chevron-right"></i> Vehicle Inventory</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Vehicle Import</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Customs Clearance</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pre-Purchase Inspection</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping & Logistics</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> After-Sales Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Star Auto Paradise, Kampala, Uganda</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> +256 701 160786</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> malikharis2089@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Sat: 9:00 AM - 4:00 PM</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Al-Malik Group. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Auto Excellence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        const grid = document.querySelector('.inventory-grid');
+        const paginationContainer = document.querySelector('.pagination-controls');
+        let vehicles = [];
+        let filteredVehicles = [];
+        let currentPage = 1;
+        const vehiclesPerPage = 12;
+        
+        // Custom dropdown initialization
+        function initCustomDropdowns() {
+            const dropdowns = document.querySelectorAll('.custom-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const selected = dropdown.querySelector('.selected-option');
+                const options = dropdown.querySelector('.dropdown-options');
+                const hiddenSelect = dropdown.nextElementSibling;
+                
+                // Set initial value
+                if (hiddenSelect.value) {
+                    const selectedOption = options.querySelector(`div[data-value="${hiddenSelect.value}"]`);
+                    if (selectedOption) {
+                        selected.textContent = selectedOption.textContent;
+                    }
+                }
+                
+                // Toggle dropdown
+                selected.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    document.querySelectorAll('.custom-dropdown').forEach(dd => {
+                        if (dd !== dropdown) {
+                            dd.classList.remove('active');
+                        }
+                    });
+                });
+                
+                // Handle option selection
+                options.querySelectorAll('div').forEach(option => {
+                    option.addEventListener('click', function() {
+                        // Update UI
+                        selected.textContent = this.textContent;
+                        dropdown.classList.remove('active');
+                        
+                        // Update hidden select value
+                        hiddenSelect.value = this.dataset.value;
+                        
+                        // Highlight selected option
+                        options.querySelectorAll('div').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        this.classList.add('selected');
+                    });
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            });
+        }
+        
+        // Render vehicles function
+        function renderVehicles(vehiclesToRender) {
+            grid.innerHTML = '';
+            
+            if (vehiclesToRender.length === 0) {
+                // Show no results message
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.innerHTML = `
+                    <i class="fas fa-car-crash"></i>
+                    <h3>No Vehicles Match Your Search Criteria</h3>
+                    <p>Try adjusting your filters or resetting to see all available vehicles.</p>
+                    <button class="btn btn-primary" id="reset-filters-from-message">Reset Filters</button>
+                `;
+                grid.appendChild(noResults);
+                
+                // Add event listener to reset button in message
+                document.getElementById('reset-filters-from-message').addEventListener('click', resetFilters);
+                return;
+            }
+            
+            vehiclesToRender.forEach(v => {
+                const postedDate = new Date(v.posted);
+                const now = new Date();
+                const diffDays = Math.floor((now - postedDate) / (1000*60*60*24));
+                let postedText = diffDays === 0
+                    ? 'Today'
+                    : diffDays === 1
+                    ? '1 day ago'
+                    : `${diffDays} days ago`;
+                
+                const card = document.createElement('div');
+                card.className = 'vehicle-card';
+                card.innerHTML = `
+                    <div class="vehicle-image">
+                        <img src="${v.mainImage}" alt="${v.title}">
+                        <div class="vehicle-badge">${v.status}</div>
+                    </div>
+                    <div class="vehicle-content">
+                        <h3 class="vehicle-title">${v.title}</h3>
+                        <p class="vehicle-description">${v.description}</p>
+                        <div class="vehicle-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div class="detail-label">Year</div>
+                                <div class="detail-value">${v.year}</div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div class="detail-label">Mileage</div>
+                                <div class="detail-value">${v.mileage}</div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <div class="detail-label">Posted</div>
+                                <div class="detail-value">${postedText}</div>
+                            </div>
+                        </div>
+                        <a href="details.html?id=${v.id}" class="vehicle-link" style="text-decoration: none;">
+                            <div class="vehicle-actions">
+                                <button class="btn btn-primary">View Details</button>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                card.dataset.make  = v.make;
+                card.dataset.model = v.model;
+                card.dataset.year  = v.year;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // Render pagination controls
+        function renderPaginationControls(totalPages) {
+            paginationContainer.innerHTML = '';
+            
+            if (totalPages <= 1) return;
+            
+            // Create pagination wrapper
+            const pagination = document.createElement('div');
+            pagination.className = 'pagination';
+            
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'pagination-btn';
+            prevBtn.innerHTML = '&laquo;';
+            prevBtn.disabled = currentPage === 1;
+            if (currentPage > 1) {
+                prevBtn.addEventListener('click', () => {
+                    currentPage--;
+                    applyFilters();
+                });
+            } else {
+                prevBtn.classList.add('disabled');
+            }
+            pagination.appendChild(prevBtn);
+            
+            // Page numbers
+            const maxPagesToShow = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+            let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+            
+            // Adjust if we're at the end
+            if (endPage - startPage < maxPagesToShow - 1) {
+                startPage = Math.max(1, endPage - maxPagesToShow + 1);
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = 'pagination-btn';
+                pageBtn.textContent = i;
+                if (i === currentPage) {
+                    pageBtn.classList.add('active');
+                }
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    applyFilters();
+                });
+                pagination.appendChild(pageBtn);
+            }
+            
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'pagination-btn';
+            nextBtn.innerHTML = '&raquo;';
+            nextBtn.disabled = currentPage === totalPages;
+            if (currentPage < totalPages) {
+                nextBtn.addEventListener('click', () => {
+                    currentPage++;
+                    applyFilters();
+                });
+            } else {
+                nextBtn.classList.add('disabled');
+            }
+            pagination.appendChild(nextBtn);
+            
+            paginationContainer.appendChild(pagination);
+            
+            // Page info
+            const pageInfo = document.createElement('div');
+            pageInfo.className = 'pagination-info';
+            const startIndex = (currentPage - 1) * vehiclesPerPage + 1;
+            const endIndex = Math.min(currentPage * vehiclesPerPage, filteredVehicles.length);
+            pageInfo.textContent = `Showing ${startIndex} to ${endIndex} of ${filteredVehicles.length} vehicles`;
+            paginationContainer.appendChild(pageInfo);
+        }
+        
+        // Apply filters function
+        function applyFilters() {
+            const selectedMake = document.getElementById('make').value;
+            const selectedModel = document.getElementById('model').value;
+            const selectedYear = document.getElementById('year').value;
+            
+            filteredVehicles = vehicles.filter(v => {
+                const makeMatch = !selectedMake || v.make === selectedMake;
+                const modelMatch = !selectedModel || v.model === selectedModel;
+                const yearMatch = !selectedYear || v.year.toString() === selectedYear;
+                
+                return makeMatch && modelMatch && yearMatch;
+            });
+            
+            // Calculate total pages
+            const totalPages = Math.ceil(filteredVehicles.length / vehiclesPerPage);
+            
+            // Ensure current page is within bounds
+            currentPage = Math.min(currentPage, totalPages);
+            if (currentPage < 1 && totalPages > 0) currentPage = 1;
+            
+            // Calculate vehicles to show for current page
+            const startIndex = (currentPage - 1) * vehiclesPerPage;
+            const endIndex = startIndex + vehiclesPerPage;
+            const pageVehicles = filteredVehicles.slice(startIndex, endIndex);
+            
+            // Render results
+            renderVehicles(pageVehicles);
+            renderPaginationControls(totalPages);
+
+            document
+                .querySelector('.inventory')
+                .scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Reset filters function
+        function resetFilters() {
+            // Reset dropdowns
+            document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+                const selected = dropdown.querySelector('.selected-option');
+                const hiddenSelect = dropdown.nextElementSibling;
+                const defaultOption = dropdown.querySelector('.dropdown-options div[data-value=""]');
+                
+                selected.textContent = defaultOption.textContent;
+                hiddenSelect.value = '';
+                
+                // Remove selection highlights
+                dropdown.querySelectorAll('.dropdown-options div').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                defaultOption.classList.add('selected');
+            });
+            
+            // Reset to first page
+            currentPage = 1;
+            
+            // Reset filtered vehicles and apply
+            filteredVehicles = [...vehicles];
+            applyFilters();
+        }
+
+         async function loadInventory() {
+            const res = await fetch('inventory.json');
+            vehicles = await res.json();
+            
+            // Clear existing content
+            grid.innerHTML = '';
+
+            renderVehicles(vehicles);
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', async () => {
+            initCustomDropdowns();
+            
+            try {
+                // Load vehicles from JSON file
+                const response = await fetch('/inventory.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load vehicle data');
+                }
+                vehicles = await response.json();
+                filteredVehicles = [...vehicles];
+                
+                // Apply initial filters to render first page
+                applyFilters();
+            } catch (error) {
+                console.error('Error loading vehicle data:', error);
+                // Optionally show an error message to the user
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Error Loading Vehicle Data</h3>
+                        <p>We couldn't load the vehicle inventory. Please try again later.</p>
+                    </div>
+                `;
+            }
+            
+            // Add event listeners
+            document.getElementById('apply-filters').addEventListener('click', applyFilters);
+            document.getElementById('reset-filters').addEventListener('click', resetFilters);
+        });
+    </script>
+        
+        
+
+
+</body>
+</html>

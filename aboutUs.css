@@ -1,0 +1,441 @@
+/* Import base styles from index.css */
+@import url('index.css');
+
+/* ===== ABOUT HERO SECTION ===== */
+.about-hero {
+    position: relative;
+    height: 70vh;
+    background: linear-gradient(rgba(26, 46, 53, 0.85), rgba(26, 46, 53, 0.9)), 
+                url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    padding: 0 40px;
+    text-align: center;
+}
+
+.about-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+/* ===== STORY SECTION ===== */
+.story-section {
+    padding: 100px 40px;
+    background: white;
+}
+
+.story-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding-left: 30px;
+}
+
+.story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--secondary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -75px;
+    top: 0;
+    background: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.3);
+}
+
+.timeline-content {
+    background: var(--light);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.timeline-content h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* ===== VALUES SECTION ===== */
+.values-section {
+    padding: 100px 40px;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.value-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(243, 156, 18, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    color: var(--secondary);
+    transition: var(--transition);
+}
+
+.value-card:hover .value-icon {
+    background: var(--secondary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.value-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+    padding: 100px 40px;
+    background: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.team-member {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    margin-top: 25px;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.team-member p {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--light);
+}
+
+.member-socials i {
+    color: var(--primary);
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.member-socials i:hover {
+    color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* Pak Japan Section */
+.pak-japan-section {
+    padding: 100px 40px 50px 40px;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.pak-japan-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pak-japan-image {
+    flex: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.pak-japan-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.pak-japan-image:hover img {
+    transform: scale(1.05);
+}
+
+.pak-japan-content {
+    flex: 1;
+}
+
+.pak-japan-content h2 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.pak-japan-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+.pak-japan-content h3 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin: 25px 0 15px;
+}
+
+.pak-japan-content ul {
+    list-style-type: none;
+    margin: 20px 0 30px;
+}
+
+.pak-japan-content ul li {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+}
+
+.pak-japan-content ul li::before {
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    min-width: 60px;
+}
+
+.feature h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .timeline-year {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 0 20px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .story-timeline {
+        padding-left: 15px;
+    }
+    
+    .story-timeline::before {
+        left: 0;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .pak-japan-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .pak-japan-image,
+    .pak-japan-content {
+        width: 100%;
+    }
+
+    .pak-japan-content h2 {
+        font-size: 2rem;
+    }
+
+    .pak-japan-content p,
+    .pak-japan-content ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .commitment-content h2 {
+        font-size: 2rem;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature i {
+        margin: 0 auto;
+    }
+
+    .pak-japan-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .pak-japan-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .pak-japan-content p,
+    .pak-japan-content ul li {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .pak-japan-container {
+        padding: 0 20px;
+    }
+}
