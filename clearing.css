@@ -930,7 +930,6 @@ footer {
     .navitems {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
     }
 
     .clearing-hero h1 {
