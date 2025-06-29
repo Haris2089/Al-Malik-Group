@@ -4,7 +4,7 @@
 /* ===== ABOUT HERO SECTION ===== */
 .about-hero {
     position: relative;
-    height: 70vh;
+    height: 81vh;
     background: linear-gradient(rgba(26, 46, 53, 0.85), rgba(26, 46, 53, 0.9)), 
                 url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -225,6 +225,11 @@
 .member-socials i:hover {
     color: var(--secondary);
     transform: translateY(-3px);
+}
+
+.phone{
+    font-size: 1px;
+    line-height: 1;
 }
 
 /* Pak Japan Section */
