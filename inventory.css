@@ -728,6 +728,10 @@ footer {
     .clearing-steps {
         width: 100%;
     }
+
+    .filter-actions button{
+        padding: 6 12;
+    }
 }
 
 @media (max-width: 768px) {
