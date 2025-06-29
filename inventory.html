@@ -21,7 +21,7 @@
 
 <body>
     <nav>
-        <div class="top-bar">
+        <div class="top-bar hideOnMobile">
             <div class="contact">
                 <a href="tel:+256701760786"><p><i class="fas fa-phone-alt"></i><strong>Call: </strong> +256 701 160786</p></a>
                 <a href="mailto:malikharis2089@gmail.com"><p><i class="fas fa-envelope"></i><strong>E-Mail: </strong> malikharis2089@gmail.com</p></a>
@@ -36,19 +36,48 @@
         </div>
         
         <div class="main-nav">
-            <div class="logo">
-                <img src="Website Pictures/Website/Logo.jpeg" alt="Al-Malik Group Logo">
-                <h1>Al-<span>Malik</span> Group</h1>
+            <div class="grid">
+                <div class="logo grid-logo">
+                    <img src="Website Pictures/Website/Logo.jpeg" alt="Al-Malik Group Logo">
+                    <h1>Al-<span>Malik</span> Group</h1>
+                </div>
+                <div class="menu grid-menu">
+                    <a href="#" onclick="showSidebar()" class="sidebar-menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                </div>
             </div>
             <div class="navitems">
-                <a href="index.html"><h3>Home</h3></a>
-                <a href="aboutUs.html"><h3>About Us</h3></a>
-                <a href="clearing.html"><h3>Clearing</h3></a>
-                <a href="contact.html"><h3>Contact Us</h3></a>
-                <a href="inventory.html"><button>
+                <a href="index.html" class="hideOnMobile"><h3>Home</h3></a>
+                <a href="aboutUs.html" class="hideOnMobile"><h3>About Us</h3></a>
+                <a href="clearing.html" class="hideOnMobile"><h3>Clearing</h3></a>
+                <a href="contact.html" class="hideOnMobile"><h3>Contact Us</h3></a>
+                <a href="inventory.html" class="hideOnMobile"><button>
                     <i class="fas fa-car"></i>
                     <h3>View Cars</h3>
                 </button></a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="main-nav">
+                <div class="navitems">
+                    <a href="#" onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+                    <a href="index.html"><h3>Home</h3></a>
+                    <a href="aboutUs.html"><h3>About Us</h3></a>
+                    <a href="clearing.html"><h3>Clearing</h3></a>
+                    <a href="contact.html"><h3>Contact Us</h3></a>
+                    <a href="inventory.html"><button>
+                        <i class="fas fa-car"></i>
+                        <h3>View Cars</h3>
+                    </button></a>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <div class="contact">
+                    <a href="tel:+256701760786"><p><i class="fas fa-phone-alt"></i><strong>Call: </strong> +256 701 160786</p></a>
+                    <a href="mailto:malikharis2089@gmail.com"><p><i class="fas fa-envelope"></i><strong>E-Mail: </strong> malikharis2089@gmail.com</p></a>
+                    <a href="https://www.google.com/maps/place/Al+Malik+Group/@0.3256178,32.6060037,17z/data=!3m1!4b1!4m6!3m5!1s0x177dbb563f7a1ea9:0x3d9296aff92f93a4!8m2!3d0.3256124!4d32.6085786!16s%2Fg%2F11j5fytydb?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><p><i class="fas fa-map-marker-alt"></i><strong>Location: </strong> Al-Malik Group</p></a>
+                </div>
             </div>
         </div>
     </nav>
@@ -236,6 +265,7 @@
         let filteredVehicles = [];
         let currentPage = 1;
         const vehiclesPerPage = 12;
+        const sidebar = document.querySelector('.sidebar')
         
         // Custom dropdown initialization
         function initCustomDropdowns() {
@@ -471,10 +501,6 @@
             // Render results
             renderVehicles(pageVehicles);
             renderPaginationControls(totalPages);
-
-            document
-                .querySelector('.inventory')
-                .scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
         // Reset filters function
@@ -511,6 +537,14 @@
             grid.innerHTML = '';
 
             renderVehicles(vehicles);
+        }
+
+        function showSidebar(){
+            sidebar.classList.toggle('active')
+        }
+
+        function closeSidebar(){
+            sidebar.classList.remove('active');
         }
         
         // Initialize when page loads
