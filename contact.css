@@ -653,7 +653,19 @@ footer {
     }
     
     .contact-container {
-        grid-template-columns: 1fr;
+        /* switch off the full-width grid */
+        display: flex;
+        flex-direction: column;
+        align-items: center;       /* <-- center the children */
+        padding: 0 20px;           /* optional: shrink your side-padding on mobile */
+    }
+
+    .contact-info,
+    .contact-form {
+        /* give each card a sensible max-width */
+        width: 100%;
+        max-width: 400px;          /* tweak this to taste */
+        margin-bottom: 40px;       /* space between them */
     }
 }
 
