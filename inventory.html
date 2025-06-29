@@ -260,6 +260,7 @@
 
     <script>
         // Global variables
+        let firstLoad = true;
         const grid = document.querySelector('.inventory-grid');
         const paginationContainer = document.querySelector('.pagination-controls');
         let vehicles = [];
@@ -267,6 +268,7 @@
         let currentPage = 1;
         const vehiclesPerPage = 12;
         const sidebar = document.querySelector('.sidebar')
+        const gridSection = document.querySelector('.inventory'); 
         
         // Custom dropdown initialization
         function initCustomDropdowns() {
@@ -502,6 +504,11 @@
             // Render results
             renderVehicles(pageVehicles);
             renderPaginationControls(totalPages);
+
+            if (!firstLoad) {
+                gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            firstLoad = false;
         }
         
         // Reset filters function
