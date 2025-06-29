@@ -207,6 +207,44 @@ text-decoration: none;
     display: none;
 }
 
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #1a2e3568;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.sidebar .main-nav{
+    flex: 1;
+}
+
+.sidebar .bottom-bar{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar-menu{
+    display: none;
+}
+
+.sidebar.active {
+  display: flex;   /* flex because you set flex-direction, etc. */
+}
+
+
 /* ===== CLEARING HERO SECTION ===== */
 .clearing-hero {
     position: relative;
@@ -832,12 +870,71 @@ footer {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 992px) {
-    .clearing-hero h1 {
-        font-size: 2.8rem;
+    .hideOnMobile{ 
+        display: none; 
+    }
+
+    .bottom-bar .contact p{
+        font-size: 11px;
+    }
+
+    .bottom-bar .contact{
+        padding: 10px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 1rem;               /* optional spacing */
+        align-items: center; 
+        width: 100%;
+    }
+
+    .grid-logo{
+        
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .grid-menu{
+        grid-row: 1;
+        grid-column: 2;
+        justify-self: end; 
+    }
+
+    .sidebar{
+        height: 100vh;
+    }
+
+    .sidebar-menu{
+        display: inline-block;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    
+    .contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        padding: 20px;
     }
     
     .navitems {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
+    }
+
+    .clearing-hero h1 {
+        font-size: 2.8rem;
     }
     
     .inquiry-container {
@@ -850,6 +947,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hideOnMobile{ 
+        display: none; 
+    }
+
+    .sidebar-menu{
+        display: flex;
+    }
+
     .top-bar {
         flex-direction: column;
         gap: 10px;
