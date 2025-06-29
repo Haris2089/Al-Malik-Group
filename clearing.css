@@ -244,11 +244,10 @@ text-decoration: none;
   display: flex;   /* flex because you set flex-direction, etc. */
 }
 
-
 /* ===== CLEARING HERO SECTION ===== */
 .clearing-hero {
     position: relative;
-    height: 70vh;
+    min-height: 60vh; /* Changed from fixed height to min-height */
     background: linear-gradient(rgba(26, 46, 53, 0.85), rgba(26, 46, 53, 0.9)), 
                 url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -256,7 +255,7 @@ text-decoration: none;
     display: flex;
     align-items: center;
     color: var(--light);
-    padding: 0 40px;
+    padding: 20px; /* Added base padding */
     overflow: hidden;
     text-align: center;
 }
@@ -265,22 +264,18 @@ text-decoration: none;
     max-width: 800px;
     animation: fadeInUp 1s ease;
     margin: 0 auto;
+    padding: 20px; /* Added inner padding */
 }
 
 .clearing-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem; /* Reduced base size */
     font-weight: 700;
-    margin: auto;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.clearing-hero h1 span {
-    color: var(--secondary);
-}
-
 .clearing-hero p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced base size */
     margin-bottom: 30px;
     max-width: 800px;
     opacity: 0.9;
@@ -931,8 +926,21 @@ footer {
         justify-content: center;
     }
 
+    .clearing-hero {
+        min-height: 50vh; /* Reduced height on mobile */
+        padding: 15px; /* Increased padding on mobile */
+    }
+    
+    .clearing-hero-content {
+        padding: 15px;
+    }
+    
     .clearing-hero h1 {
-        font-size: 2.8rem;
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    
+    .clearing-hero p {
+        font-size: 0.9rem; /* Smaller paragraph on mobile */
     }
     
     .inquiry-container {
@@ -976,7 +984,7 @@ footer {
     }
     
     .clearing-hero {
-        padding: 0 20px;
+        padding: 20px 20px;
         text-align: center;
         height: 60vh;
     }
@@ -1004,8 +1012,23 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .clearing-hero {
+        min-height: 45vh; /* Further reduced height on small screens */
+    }
+    
     .clearing-hero h1 {
-        font-size: 2rem;
+        font-size: 1.7rem; /* Even smaller heading */
+    }
+    
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%; /* Full-width buttons */
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .section-title h2 {
