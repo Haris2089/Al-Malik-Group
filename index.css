@@ -824,7 +824,7 @@ footer {
     }
 
     .grid-logo{
-        margin-top: 20px;
+        
         grid-row: 1;
         grid-column: 1;
     }
@@ -833,7 +833,6 @@ footer {
         grid-row: 1;
         grid-column: 2;
         justify-self: end; 
-        padding-top: 25px;
     }
 
     .sidebar{
@@ -858,7 +857,6 @@ footer {
     
     .main-nav {
         flex-direction: column;
-        gap: 25px;
         padding: 20px;
     }
     
@@ -907,8 +905,6 @@ footer {
     
     .main-nav {
         flex-direction: column;
-        gap: 25px;
-        padding: 20px;
     }
     
     .navitems {
