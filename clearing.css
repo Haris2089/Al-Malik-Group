@@ -891,7 +891,6 @@ footer {
     }
 
     .grid-logo{
-        
         grid-row: 1;
         grid-column: 1;
     }
@@ -968,7 +967,6 @@ footer {
     
     .main-nav {
         flex-direction: column;
-        gap: 25px;
         padding: 20px;
     }
     
