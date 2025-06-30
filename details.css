@@ -206,10 +206,15 @@ nav {
     background-color: #1a2e3568;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+    /* 1. Always keep it in the flow: */
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    /* 2. Hide it off-screen initially: */
+    transform: translateX(100%);
+    transition: transform 0.3
 }
 
 .sidebar a{
@@ -230,7 +235,8 @@ nav {
 }
 
 .sidebar.active {
-  display: flex;   /* flex because you set flex-direction, etc. */
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .vehicle-details {

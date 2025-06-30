@@ -241,8 +241,8 @@ nav {
 }
 
 .sidebar.active {
-  transform: translateX(0);
-  pointer-events: auto;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 /* ===== HERO SECTION ===== */
