@@ -214,7 +214,8 @@ nav {
 
     /* 2. Hide it off-screen initially: */
     transform: translateX(100%);
-    transition: transform 0.3
+    transition: transform 0.3;
+    pointer-events: none; 
 }
 
 .sidebar a{
