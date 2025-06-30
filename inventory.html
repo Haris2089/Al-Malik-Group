@@ -279,6 +279,11 @@
         const vehiclesPerPage = 12;
         const sidebar = document.querySelector('.sidebar')
         const gridSection = document.querySelector('.inventory'); 
+
+        const saved = parseInt(localStorage.getItem('inventoryPage'), 10);
+        if (!isNaN(saved) && saved > 0) {
+            currentPage = saved;
+        }
         
         // Custom dropdown initialization
         function initCustomDropdowns() {
@@ -408,7 +413,14 @@
                 
                 grid.appendChild(card);
             });
+                // Attach a click-save handler on every "View Details" link
+                document.querySelectorAll('.vehicle-link').forEach(a => {
+                a.addEventListener('click', () => {
+                    localStorage.setItem('inventoryPage', currentPage);
+                });
+            });
         }
+        
         
         // Render pagination controls
         function renderPaginationControls(totalPages) {
@@ -428,7 +440,9 @@
             if (currentPage > 1) {
                 prevBtn.addEventListener('click', () => {
                     currentPage--;
+                    localStorage.setItem('inventoryPage', currentPage);
                     applyFilters();
+                    gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             } else {
                 prevBtn.classList.add('disabled');
@@ -454,7 +468,9 @@
                 }
                 pageBtn.addEventListener('click', () => {
                     currentPage = i;
+                    localStorage.setItem('inventoryPage', currentPage);
                     applyFilters();
+                    gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
                 pagination.appendChild(pageBtn);
             }
@@ -467,7 +483,9 @@
             if (currentPage < totalPages) {
                 nextBtn.addEventListener('click', () => {
                     currentPage++;
+                    localStorage.setItem('inventoryPage', currentPage);
                     applyFilters();
+                    gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             } else {
                 nextBtn.classList.add('disabled');
@@ -514,11 +532,6 @@
             // Render results
             renderVehicles(pageVehicles);
             renderPaginationControls(totalPages);
-
-            if (!firstLoad) {
-                gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            firstLoad = false;
         }
         
         // Reset filters function
@@ -542,6 +555,7 @@
             // Reset to first page
             currentPage = 1;
             
+            localStorage.setItem('inventoryPage', currentPage);
             // Reset filtered vehicles and apply
             filteredVehicles = [...vehicles];
             applyFilters();
@@ -567,8 +581,28 @@
         
         // Initialize when page loads
         window.addEventListener('DOMContentLoaded', async () => {
-            initCustomDropdowns();
+            // 1) If this is a hard reload, reset to page 1
+            const nav = performance.getEntriesByType('navigation');
+            if (nav.length && nav[0].type === 'reload') {
+            localStorage.setItem('inventoryPage', '1');
+            }
+
+            // 2) Any "View Cars" link should reset to page 1
+            document
+            .querySelectorAll('a[href="inventory.html"]')
+            .forEach(link => {
+                link.addEventListener('click', () => {
+                localStorage.setItem('inventoryPage', '1');
+                });
+            });
+
+            // 3) Now restore (or default) currentPage
+            const saved = parseInt(localStorage.getItem('inventoryPage'), 10);
+            currentPage = (!isNaN(saved) && saved > 0) ? saved : 1;
+
             
+            initCustomDropdowns();
+
             try {
                 // Load vehicles from JSON file
                 const response = await fetch('/inventory.json');
@@ -593,7 +627,13 @@
             }
             
             // Add event listeners
-            document.getElementById('apply-filters').addEventListener('click', applyFilters);
+            document
+                .getElementById('apply-filters')
+                .addEventListener('click', () => {
+                    applyFilters();
+                    gridSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
             document.getElementById('reset-filters').addEventListener('click', resetFilters);
         });
     </script>

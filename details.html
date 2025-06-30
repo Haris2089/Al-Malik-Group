@@ -110,8 +110,8 @@
                     <div class="gallery">
                         <div class="main-image">
                             <img id="main-img" src="" alt="Vehicle Image">
-                            <button class="thumb-scroll left" onclick="changeImage(-1)">❮</button>
-                            <button class="thumb-scroll right" onclick="changeImage(1)">❯</button>
+                            <button class="thumb-scroll left" onclick="changeImage(-1, true)">❮</button>
+                            <button class="thumb-scroll right" onclick="changeImage(1, true)">❯</button>
                         </div>
                         <div class="thumbnails" id="thumbnails"></div>
                     </div>
@@ -354,7 +354,7 @@
                     const img = document.createElement('img');
                     img.src = src; img.alt = `Thumb ${i+1}`;
                     t.appendChild(img);
-                    t.addEventListener('click', ()=>{ currentIndex = i; changeImage(0); });
+                    t.addEventListener('click', ()=>{ currentIndex = i; changeImage(0, true); });
                     thumbs.appendChild(t);
                 });
 
@@ -396,15 +396,17 @@
             document.getElementById('thankYouModal').style.display = 'none';
         });
 
-        function changeImage(dir) {
+        function changeImage(dir, shouldScrollThumb = true) {
             if (!vehicleImages.length) return;
             currentIndex = (currentIndex + dir + vehicleImages.length) % vehicleImages.length;
             document.getElementById('main-img').src = vehicleImages[currentIndex];
             document.querySelectorAll('.thumbnail').forEach((t,i) =>
                 t.classList.toggle('active', i===currentIndex)
             );
-            const act = document.querySelector('.thumbnail.active');
-            if (act) act.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+            if (shouldScrollThumb) {
+                const act = document.querySelector('.thumbnail.active');
+                if (act) act.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+            }
         }
 
         function showError(msg) {
