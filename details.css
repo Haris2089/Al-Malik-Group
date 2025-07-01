@@ -240,6 +240,10 @@ nav {
     pointer-events: auto;
 }
 
+.vehicle-description{
+    margin-bottom: 20px;
+}
+
 .vehicle-details {
     padding: 60px 0;
     background-color: white;
@@ -290,16 +294,20 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image {
+    width: 100%;
     position: relative;
+    flex-grow: 0 !important;
     height: 0;
     padding-bottom: 70%; /* Maintain aspect ratio */
     overflow: hidden;
     border-radius: var(--border-radius);
-    margin-bottom: 20px;
-    flex-grow: 1;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .main-image img {
@@ -314,17 +322,19 @@ nav {
 
 .thumbnails-container {
     position: relative;
-    margin-top: auto; /* Push to bottom */
     width: 100%;
 }
 
 .thumbnails {
     display: flex;
+    width: 100%;
+    max-width: 600px;
     gap: 10px;
     overflow-x: auto;
     padding: 10px 0;
     scrollbar-width: thin;
-    margin: 0 -5px;
+    margin: 20px auto 0;
+    scroll-behavior: smooth;
 }
 
 .thumbnail {
