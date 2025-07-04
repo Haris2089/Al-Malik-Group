@@ -272,7 +272,7 @@
     "Website Pictures/Car Pictures/Sienta/Grey Hybrid Sienta/Screenshot 2025-06-08 110836.png"
   ],
   "make": "toyota",
-  "model": "sienta hybrid",
+  "model": "sienta",
   "fuelType": "Hybrid",
   "transmission": "AT",
   "color": "Silver",
@@ -659,7 +659,7 @@
     "Website Pictures/Car Pictures/Fielder/Silver Fielder/Screenshot 2025-06-12 165434.png"
   ],
   "make": "toyota",
-  "model": "corolla fielder hybrid",
+  "model": "fielder",
   "fuelType": "Hybrid",
   "transmission": "AT",
   "color": "Silver",
@@ -867,7 +867,7 @@
     "Website Pictures/Car Pictures/Fielder/Black Fielder/Screenshot 2025-07-01 203241.png"
   ],
   "make": "toyota",
-  "model": "corolla fielder",
+  "model": "fielder",
   "fuelType": "Petrol",
   "transmission": "Floor AT",
   "color": "Black",
@@ -885,6 +885,49 @@
 },
 {
   "id": 26,
+  "title": "Subaru Forester 2.0 XT EyeSight 4WD",
+  "description": "XT EyeSight Forester SUV, 2.0 L petrol, 4WD, column-shift AT, AAC air-con, power steering & windows, alloy wheels, sunroof, navigation, TV, ABS, push-start, ETC, backup camera, radar cruise control, LED headlights.",
+  "year": 2017,
+  "mileage": "N/A",
+  "posted": "2025-07-04",
+  "price": null,
+  "status": "Available",
+  "mainImage": "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192100.png",
+  "images": [
+    "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192107.png",
+    "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192100.png",
+    "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192121.png",
+    "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192131.png",
+    "Website Pictures/Car Pictures/Subaru Forester/Screenshot 2025-07-04 192137.png"
+  ],
+  "make": "subaru",
+  "model": "forester",
+  "fuelType": "Petrol",
+  "transmission": "Column AT",
+  "color": "Pearl",
+  "colorNo": "K1X",
+  "bodyType": "SUV",
+  "driveType": "4WD",
+  "doors": 5,
+  "seats": 5,
+  "features": [
+    "Air Conditioning (AAC)",
+    "Power Steering",
+    "Power Windows",
+    "Alloy Wheels",
+    "Sunroof",
+    "Navigation",
+    "TV",
+    "ABS",
+    "Push-Start",
+    "ETC",
+    "Backup Camera",
+    "Radar Cruise Control",
+    "LED Headlights"
+  ]
+},
+{
+  "id": 27,
   "title": "Toyota LX600 4WD",
   "description": "LX600 grade 5-door SUV, 3.5 L V6 petrol, 4WD, FAT auto, navigation & full-segment TV, panoramic view monitor, rear entertainment system, Mark Levinson audio, cool seats, power back door.",
   "year": 2024,
@@ -932,7 +975,7 @@
   ]
 },
 {
-  "id": 27,
+  "id": 28,
   "title": "Toyota RAV4 Adventure 4WD",
   "description": "Adventure–grade RAV4 SUV, 2.0 L petrol, 4WD, FAT automatic, AAC air-con, power steering & windows, airbags, ABS, alloy wheels, LED headlamps, Toyota Safety Sense with BSM & RCTA, digital display + TV, one-owner, built-in ETC, smart entry, heated leather seats, heated steering wheel, drive recorder.",
   "year": 2021,
@@ -981,47 +1024,6 @@
     "Heated Leather Seats",
     "Heated Steering Wheel",
     "Drive Recorder"
-  ]
-},
-{
-  "id": 28,
-  "title": "Toyota Camry WS",
-  "description": "WS–grade Camry sedan, 2.5 L petrol, 2WD, FAT automatic, AAC air-con, power steering & windows, airbags, ABS, alloy wheels, factory navigation & backup camera, Toyota Safety Sense with BSM & cruise control, ETC, smart key & push-start, power seats.",
-  "year": 2020,
-  "mileage": "N/A",
-  "posted": "2025-06-08T08:00:00Z",
-  "price": null,
-  "status": "Available",
-  "mainImage": "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142208.png",
-  "images": [
-    "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142208.png",
-    "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142214.png"
-  ],
-  "make": "toyota",
-  "model": "camry",
-  "grade": "WS",
-  "fuelType": "Petrol",
-  "engineCC": 2500,
-  "transmission": "FAT",
-  "driveType": "2WD",
-  "color": "Pearl",
-  "colorNo": "089",
-  "bodyType": "Sedan",
-  "doors": 4,
-  "seats": 5,
-  "features": [
-    "Air Conditioning (AAC)",
-    "Power Steering",
-    "Power Windows",
-    "Airbags",
-    "ABS",
-    "Alloy Wheels",
-    "Factory Navigation",
-    "Backup Camera",
-    "Toyota Safety Sense (BSM, Cruise Control)",
-    "ETC",
-    "Smart Key & Push-Start",
-    "Power Seats"
   ]
 },
 {
@@ -1614,6 +1616,47 @@
     "Universal Side Step",
     "Power Sliding Doors (L/R)",
     "Floor Mats"
+  ]
+},
+{
+  "id": 43,
+  "title": "Toyota Camry WS",
+  "description": "WS–grade Camry sedan, 2.5 L petrol, 2WD, FAT automatic, AAC air-con, power steering & windows, airbags, ABS, alloy wheels, factory navigation & backup camera, Toyota Safety Sense with BSM & cruise control, ETC, smart key & push-start, power seats.",
+  "year": 2020,
+  "mileage": "N/A",
+  "posted": "2025-06-08T08:00:00Z",
+  "price": null,
+  "status": "Available",
+  "mainImage": "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142208.png",
+  "images": [
+    "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142208.png",
+    "Website Pictures/Not Our Car Pictures/Toyota/2020 Camry White/Screenshot 2025-06-26 142214.png"
+  ],
+  "make": "toyota",
+  "model": "camry",
+  "grade": "WS",
+  "fuelType": "Petrol",
+  "engineCC": 2500,
+  "transmission": "FAT",
+  "driveType": "2WD",
+  "color": "Pearl",
+  "colorNo": "089",
+  "bodyType": "Sedan",
+  "doors": 4,
+  "seats": 5,
+  "features": [
+    "Air Conditioning (AAC)",
+    "Power Steering",
+    "Power Windows",
+    "Airbags",
+    "ABS",
+    "Alloy Wheels",
+    "Factory Navigation",
+    "Backup Camera",
+    "Toyota Safety Sense (BSM, Cruise Control)",
+    "ETC",
+    "Smart Key & Push-Start",
+    "Power Seats"
   ]
 }
 
