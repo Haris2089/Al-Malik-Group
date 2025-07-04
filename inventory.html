@@ -61,7 +61,7 @@
                 <a href="aboutUs.html" class="hideOnMobile"><h3>About Us</h3></a>
                 <a href="clearing.html" class="hideOnMobile"><h3>Clearing</h3></a>
                 <a href="contact.html" class="hideOnMobile"><h3>Contact Us</h3></a>
-                <a href="inventory.html" class="hideOnMobile"><button>
+                <a href="inventory.html" onclick="localStorage.setItem('inventoryPage','1')" class="hideOnMobile"><button>
                     <i class="fas fa-car"></i>
                     <h3>View Cars</h3>
                 </button></a>
@@ -76,7 +76,7 @@
                     <a href="aboutUs.html"><h3>About Us</h3></a>
                     <a href="clearing.html"><h3>Clearing</h3></a>
                     <a href="contact.html"><h3>Contact Us</h3></a>
-                    <a href="inventory.html"><button>
+                    <a href="inventory.html" onclick="localStorage.setItem('inventoryPage','1')"><button>
                         <i class="fas fa-car"></i>
                         <h3>View Cars</h3>
                     </button></a>
@@ -136,30 +136,42 @@
                             <div class="selected-option" id="model-selected">All Models</div>
                             <div class="dropdown-options" id="model-options">
                                 <div data-value="">All Models</div>
-                                <div data-value="prado">Land Cruiser Prado</div>
-                                <div data-value="rav4">RAV4</div>
-                                <div data-value="hiace">Hiace</div>
-                                <div data-value="harrier">Harrier</div>
+                                <div data-value="camry">Camry</div>
                                 <div data-value="fielder">Fielder</div>
+                                <div data-value="forester">Forester</div>
+                                <div data-value="harrier">Harrier</div>
+                                <div data-value="hiace">Hiace</div>
+                                <div data-value="hilux">Hilux</div>
+                                <div data-value="prado">Land Cruiser Prado</div>
+                                <div data-value="lx600">LX600</div>
+                                <div data-value="mark x">Mark X</div>
+                                <div data-value="noah">Noah</div>
+                                <div data-value="outback">Outback</div>
                                 <div data-value="premio">Premio</div>
                                 <div data-value="probox">Probox</div>
+                                <div data-value="rav4">RAV4</div>
                                 <div data-value="sienta">Sienta</div>
-                                <div data-value="noah">Noah</div>
-                                <div data-value="hilux">Hilux</div>
+                                <div data-value="wish">Wish</div>
                             </div>
                         </div>
                         <select id="model" style="display: none;">
                             <option value="">All Models</option>
-                            <option value="prado">Land Cruiser Prado</option>
-                            <option value="rav4">RAV4</option>
-                            <option value="hiace">Hiace</option>
-                            <option value="harrier">Harrier</option>
+                            <option value="camry">Camry</option>
                             <option value="fielder">Fielder</option>
+                            <option value="forester">Forester</option>
+                            <option value="harrier">Harrier</option>
+                            <option value="hiace">Hiace</option>
+                            <option value="hilux">Hilux</option>
+                            <option value="prado">Land Cruiser Prado</option>
+                            <option value="lx600">LX600</option>
+                            <option value="mark x">Mark X</option>
+                            <option value="noah">Noah</option>
+                            <option value="outback">Outback</option>
                             <option value="premio">Premio</option>
                             <option value="probox">Probox</option>
+                            <option value="rav4">RAV4</option>
                             <option value="sienta">Sienta</option>
-                            <option value="noah">Noah</option>
-                            <option value="hilux">Hilux</option>
+                            <option value="wish">Wish</option>
                         </select>
                     </div>
                     
